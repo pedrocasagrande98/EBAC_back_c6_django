@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Meu Site Django{% endblock %}</title>
+    
+    {% block css %}
+    <style>
+        /* CSS Básico Padrão do site (Em blocos conforme solicitado) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .main-content {
+            flex: 3;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            flex: 1;
+            margin-left: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+    {% endblock %}
+</head>
+<body>
+
+    <header>
+        <h1>{% block header_title %}Bem-vindo ao Meu Site{% endblock %}</h1>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            {% block content %}
+            <!-- Conteúdo dinâmico virá aqui -->
+            {% endblock %}
+        </main>
+
+        <aside class="sidebar">
+            {% include 'sidebar.html' %}
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Exercício Módulo Django Templates</p>
+    </footer>
+
+</body>
+</html>

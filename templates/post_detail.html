@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalhe do Post - Meu Site Django{% endblock %}
+
+{% block header_title %}Detalhe do Post{% endblock %}
+
+{% block content %}
+<article class="post-detail">
+    <h2>Título do Post Dinâmico (Exemplo)</h2>
+    <p class="meta-info">Publicado em 24 de Junho de 2026</p>
+    
+    <div class="post-body">
+        <p>Este é o conteúdo completo da postagem. Quando integrarmos com o banco de dados (Models) e as Views corretas, este texto virá diretamente do Django dinamicamente.</p>
+        <p>A estrutura post_detail.html foi criada para manter o padrão visto no exercício.</p>
+    </div>
+    
+    <a href="{% url 'index' %}" style="display:inline-block; margin-top: 20px; text-decoration: none; color: #00796b;">&larr; Voltar para a página inicial</a>
+</article>
+{% endblock %}
