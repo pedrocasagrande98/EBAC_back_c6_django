@@ -1,6 +1,4 @@
 # Django
-*.sqlite3
-db.sqlite3
 media/
 staticfiles/
 
@@ -10,7 +8,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
+build/S
 develop-eggs/
 dist/
 downloads/
