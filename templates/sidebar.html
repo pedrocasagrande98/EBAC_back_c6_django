@@ -1,13 +1,17 @@
-<div class="widget">
-    <h3>Sobre o Blog</h3>
-    <p>Este é um projeto desenvolvido para o curso da EBAC, demonstrando a funcionalidade de Templates e Views no Django.</p>
+{% block sidebar %}
+
+
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right ">
+    <div class="card my-4">
+        <h5 class="card-header">About Us</h5>
+        <div class="card-body">
+            <p class="card-text"> This awesome blog is made on the top of our Favourite full stack Framework 'Django',
+                follow up the tutorial to learn how we made it..!</p>
+            <a href="#" class="btn btn-danger">Know more!</a>
+        </div>
+    </div>
 </div>
 
-<div class="widget" style="margin-top: 20px;">
-    <h3>Categorias</h3>
-    <ul style="list-style-type: none; padding: 0;">
-        <li style="margin-bottom: 5px;"><a href="#" style="text-decoration: none; color: #00796b;">Python</a></li>
-        <li style="margin-bottom: 5px;"><a href="#" style="text-decoration: none; color: #00796b;">Django</a></li>
-        <li style="margin-bottom: 5px;"><a href="#" style="text-decoration: none; color: #00796b;">Web Development</a></li>
-    </ul>
-</div>
+{% endblock sidebar %}
